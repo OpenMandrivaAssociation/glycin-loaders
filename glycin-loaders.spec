@@ -39,7 +39,7 @@ cp %{SOURCE3} .cargo/config
 
 %build
 %meson \
-  -Dloaders=glycin-image-rs,glycin-jxl,glycin-svg \
+  -Dloaders=glycin-image-rs,glycin-jxl,glycin-svg,glycin-heif \
   -Dtest_skip_install=true
 
 %meson_build
