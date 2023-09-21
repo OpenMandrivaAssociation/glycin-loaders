@@ -48,7 +48,6 @@ cp %{SOURCE3} .cargo/config
 
 %files
 %license LICENSE LICENSE-LGPL-2.1 LICENSE-MPL-2.0
-%license LICENSE.dependencies
 %doc NEWS README.md
 %{_libexecdir}/glycin-loaders/
 %{_datadir}/glycin-loaders/
