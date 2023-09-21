@@ -23,7 +23,7 @@ BuildRequires:  git-core
 BuildRequires:  meson
 BuildRequires:  pkgconfig(gtk4)
 BuildRequires:  pkgconfig(cairo)
-BuildRequires:  pkgconfig(libheif)
+#BuildRequires:  pkgconfig(libheif)
 BuildRequires:  pkgconfig(libxml-2.0)
 
  
@@ -37,7 +37,7 @@ cp %{SOURCE3} .cargo/config
 
 %build
 %meson \
-  -Dloaders=glycin-heif,glycin-image-rs,glycin-jxl,glycin-svg \
+  -Dloaders=glycin-image-rs,glycin-jxl,glycin-svg \
   -Dtest_skip_install=true
 
 %meson_build
