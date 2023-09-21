@@ -11,13 +11,7 @@ URL:            https://gitlab.gnome.org/sophie-h/glycin
 Source0:        https://download.gnome.org/sources/glycin-loaders/0.1/glycin-loaders-%{tarball_version}.tar.xz
 Source2:        vendor.tar.xz
 Source3:        cargo_config
-# Fedora-packaged rust-image doesn't have openexr support
-#Patch:          0001-Drop-OpenEXR-decoders-since-they-are-not-enabled-in-.patch
-# libheif and jxl rust wrappers aren't packaged yet
-#Patch:          0002-Disable-JPEG-XL-and-HEIF-loaders-missing-dependencie.patch
-# Fedora currently has librsvg 2.57.0-beta.2
-#Patch:          0003-Temporarily-downgrade-librsvg-dependency-to-allow-2..patch
- 
+
 BuildRequires:  cargo
 BuildRequires:  rust
 BuildRequires:  git-core
@@ -39,7 +33,7 @@ cp %{SOURCE3} .cargo/config
 
 %build
 %meson \
-  -Dloaders=glycin-image-rs,glycin-jxl,glycin-svg,glycin-heif \
+  -Dloaders=glycin-image-rs,glycin-jxl,glycin-svg \
   -Dtest_skip_install=true
 
 %meson_build
