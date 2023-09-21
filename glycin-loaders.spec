@@ -8,7 +8,7 @@ License:        (Apache-2.0 OR MIT) AND BSD-3-Clause AND (MIT OR Apache-2.0) AND
 # LICENSE.dependencies contains a full license breakdown
 URL:            https://gitlab.gnome.org/sophie-h/glycin
 Source0:        https://download.gnome.org/sources/glycin-loaders/0.1/glycin-loaders-%{tarball_version}.tar.xz
-Source2:        vendor.tar.zst
+Source2:        vendor.tar.xz
 Source3:        cargo_config
 # Fedora-packaged rust-image doesn't have openexr support
 #Patch:          0001-Drop-OpenEXR-decoders-since-they-are-not-enabled-in-.patch
