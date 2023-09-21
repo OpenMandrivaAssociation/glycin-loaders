@@ -1,3 +1,4 @@
+%define _empty_manifest_terminate_build 0
 %global tarball_version %%(echo %{version} | tr '~' '.')
  
 Name:           glycin-loaders
