@@ -21,6 +21,7 @@ BuildRequires:  pkgconfig(cairo)
 #BuildRequires:  pkgconfig(libheif)
 BuildRequires:  pkgconfig(libxml-2.0)
 BuildRequires:  pkgconfig(libssh2)
+BuildRequires:  pkgconfig(libseccomp)
 
  
 %description
