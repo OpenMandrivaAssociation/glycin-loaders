@@ -14,6 +14,7 @@ Source0:        https://download.gnome.org/sources/glycin-loaders/%{tarball_vers
 
 BuildRequires:  cargo
 BuildRequires:  rust
+BuildRequires:  gettext
 BuildRequires:  git-core
 BuildRequires:  meson
 BuildRequires:  pkgconfig(gtk4)
