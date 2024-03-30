@@ -19,6 +19,7 @@ BuildRequires:  meson
 BuildRequires:  pkgconfig(gtk4)
 BuildRequires:  pkgconfig(cairo)
 #BuildRequires:  pkgconfig(libheif)
+BuildRequires:  pkgconfig(libjxl)
 BuildRequires:  pkgconfig(libxml-2.0)
 BuildRequires:  pkgconfig(libssh2)
 BuildRequires:  pkgconfig(libseccomp)
