@@ -40,6 +40,7 @@ Sandboxed and extendable image decoding.
 %build
 %meson \
   -Dglycin-loaders=true \
+  -Dlibglycin=true \
   -Dloaders=glycin-image-rs,glycin-jxl,glycin-svg \
   -Dtest_skip_install=true
 
