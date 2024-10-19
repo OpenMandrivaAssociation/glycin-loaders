@@ -19,6 +19,7 @@ BuildRequires:  git-core
 BuildRequires:  meson
 BuildRequires:  pkgconfig(gtk4)
 BuildRequires:  pkgconfig(cairo)
+BuildRequires:  pkgconfig(harfbuzz-gobject)
 BuildRequires:  pkgconfig(lcms2)
 #BuildRequires:  pkgconfig(libheif)
 BuildRequires:  pkgconfig(libjxl)
