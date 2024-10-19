@@ -41,6 +41,8 @@ Sandboxed and extendable image decoding.
 %meson \
   -Dglycin-loaders=true \
   -Dlibglycin=true \
+  -Dintrospection=true \
+  -Dvapi=true \
   -Dloaders=glycin-image-rs,glycin-jxl,glycin-svg \
   -Dtest_skip_install=true
 
