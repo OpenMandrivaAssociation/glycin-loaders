@@ -27,6 +27,7 @@ BuildRequires:  pkgconfig(libxml-2.0)
 BuildRequires:  pkgconfig(libssh2)
 BuildRequires:  pkgconfig(libseccomp)
 BuildRequires:  pkgconfig(gobject-introspection-1.0)
+BuildRequires:  pkgconfig(vapigen)
 
  
 %description
