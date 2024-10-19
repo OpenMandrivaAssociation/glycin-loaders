@@ -21,6 +21,7 @@ BuildRequires:  pkgconfig(gtk4)
 BuildRequires:  pkgconfig(cairo)
 #BuildRequires:  pkgconfig(libheif)
 BuildRequires:  pkgconfig(libjxl)
+BuildRequires:  pkgconfig(librsvg-2.0)
 BuildRequires:  pkgconfig(libxml-2.0)
 BuildRequires:  pkgconfig(libssh2)
 BuildRequires:  pkgconfig(libseccomp)
@@ -37,6 +38,7 @@ Sandboxed and extendable image decoding.
 
 %build
 %meson \
+  -Dglycin-loaders=true \
   -Dloaders=glycin-image-rs,glycin-jxl,glycin-svg \
   -Dtest_skip_install=true
 
