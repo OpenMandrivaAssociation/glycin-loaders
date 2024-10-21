@@ -1,5 +1,11 @@
 %define _empty_manifest_terminate_build 0
 %global tarball_version %%(echo %{version} | tr '~' '.')
+
+%define major 0
+
+%define libname %mklibname glycin
+%define devname %mklibname -d glycin
+%define girname %mklibname glycin-gir
  
 Name:           glycin-loaders
 Version:        1.1.1
@@ -30,9 +36,31 @@ BuildRequires:  pkgconfig(libseccomp)
 BuildRequires:  pkgconfig(gobject-introspection-1.0)
 BuildRequires:  pkgconfig(vapigen)
 
- 
+Requires:	%{libname} = %{EVRD}
+
 %description
 Sandboxed and extendable image decoding.
+
+%package -n %{libname}
+Summary:        Shared library for %{name}
+
+%description -n %{libname}
+This package contains the shared library files.
+
+%package -n %{girname}
+Summary:        Introspection file for %{name}
+
+%description -n %{girname}
+This package contains introspection file for %{name}.
+
+%package -n %{devname}
+Summary:        Development files for %{name}
+Requires: %{name} = %{EVRD}
+Requires:	%{libname} = %{EVRD}
+Requires:	%{girname} = %{EVRD}
+
+%description -n %{devname}
+This package contains development files for %{name}.
  
 %prep
 %autosetup -n glycin-%{version} -p1 
@@ -59,4 +87,26 @@ Sandboxed and extendable image decoding.
 %doc NEWS README.md
 %{_libexecdir}/glycin-loaders/
 %{_datadir}/glycin-loaders/
+
+%files -n %{libname}
+%{_libdir}/libglycin-1.so.%{major}
+%{_libdir}/libglycin-gtk4-1.so.%{major}
+
+%files -n %{girname}
+%{_libdir}/girepository-1.0/Gly-1.typelib
+%{_libdir}/girepository-1.0/GlyGtk4-1.typelib
+
+%files -n %{devname}
+%{_libdir}/libglycin-1.so
+%{_libdir}/libglycin-gtk4-1.so
+%{_libdir}/pkgconfig/glycin-1.pc
+%{_libdir}/pkgconfig/glycin-gtk4-1.pc
+%{_includedir}/glycin-1/glycin.h
+%{_includedir}/glycin-gtk4-1/glycin-gtk4.h
+%{_datadir}/gir-1.0/Gly-1.gir
+%{_datadir}/gir-1.0/GlyGtk4-1.gir
+%{_datadir}/vala/vapi/libglycin-1.deps
+%{_datadir}/vala/vapi/libglycin-1.vapi
+%{_datadir}/vala/vapi/libglycin-gtk4-1.deps
+%{_datadir}/vala/vapi/libglycin-gtk4-1.vapi
  
