@@ -106,8 +106,5 @@ This package contains development files for %{name}.
 %{_includedir}/glycin-gtk4-1/glycin-gtk4.h
 %{_datadir}/gir-1.0/Gly-1.gir
 %{_datadir}/gir-1.0/GlyGtk4-1.gir
-%{_datadir}/vala/vapi/libglycin-1.deps
-%{_datadir}/vala/vapi/libglycin-1.vapi
-%{_datadir}/vala/vapi/libglycin-gtk4-1.deps
-%{_datadir}/vala/vapi/libglycin-gtk4-1.vapi
+
  
