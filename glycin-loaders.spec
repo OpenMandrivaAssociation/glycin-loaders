@@ -104,21 +104,21 @@ EOF
 #{_libdir}/libglycin-gtk4-1.so.%{major}
 
 %files -n %{girname}
-%{_libdir}/girepository-1.0/Gly-1.typelib
-%{_libdir}/girepository-1.0/GlyGtk4-1.typelib
+#{_libdir}/girepository-1.0/Gly-1.typelib
+#{_libdir}/girepository-1.0/GlyGtk4-1.typelib
 
 %files -n %{devname}
 #{_libdir}/libglycin-1.so
 #{_libdir}/libglycin-gtk4-1.so
 #{_libdir}/pkgconfig/glycin-1.pc
 #{_libdir}/pkgconfig/glycin-gtk4-1.pc
-%{_includedir}/glycin-1/glycin.h
-%{_includedir}/glycin-gtk4-1/glycin-gtk4.h
-%{_datadir}/gir-1.0/Gly-1.gir
-%{_datadir}/gir-1.0/GlyGtk4-1.gir
-%{_datadir}/vala/vapi/glycin-1.deps
-%{_datadir}/vala/vapi/glycin-1.vapi
-%{_datadir}/vala/vapi/glycin-gtk4-1.deps
-%{_datadir}/vala/vapi/glycin-gtk4-1.vapi
+#{_includedir}/glycin-1/glycin.h
+#{_includedir}/glycin-gtk4-1/glycin-gtk4.h
+#{_datadir}/gir-1.0/Gly-1.gir
+#{_datadir}/gir-1.0/GlyGtk4-1.gir
+#{_datadir}/vala/vapi/glycin-1.deps
+#{_datadir}/vala/vapi/glycin-1.vapi
+#{_datadir}/vala/vapi/glycin-gtk4-1.deps
+#{_datadir}/vala/vapi/glycin-gtk4-1.vapi
 
  
