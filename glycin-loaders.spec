@@ -85,7 +85,7 @@ EOF
   -Dlibglycin=true \
   -Dintrospection=true \
   -Dvapi=true \
-  -Dloaders=glycin-image-rs,glycin-jxl,glycin-svg \
+  -Dloaders=glycin-image-rs,glycin-jxl,glycin-svg,glycin-jpeg2000 \
   -Dtest_skip_install=true
 
 %meson_build
@@ -100,25 +100,30 @@ EOF
 %{_datadir}/glycin-loaders/
 
 %files -n %{libname}
-#{_libdir}/libglycin-1.so.%{major}
-#{_libdir}/libglycin-gtk4-1.so.%{major}
+%{_libdir}/libglycin-2.so.%{major}*
+%{_libdir}/libglycin-gtk4-2.so.%{major}*
 
 %files -n %{girname}
-#{_libdir}/girepository-1.0/Gly-1.typelib
-#{_libdir}/girepository-1.0/GlyGtk4-1.typelib
+%{_libdir}/girepository-1.0/Gly-2.typelib
+%{_libdir}/girepository-1.0/GlyGtk4-2.typelib
+
+%files thumbnailer
+%{_bindir}/glycin-thumbnailer
+%dir %{_datadir}/thumbnailers/
+%{_datadir}/thumbnailers/*.thumbnailer
 
 %files -n %{devname}
-#{_libdir}/libglycin-1.so
-#{_libdir}/libglycin-gtk4-1.so
-#{_libdir}/pkgconfig/glycin-1.pc
-#{_libdir}/pkgconfig/glycin-gtk4-1.pc
-#{_includedir}/glycin-1/glycin.h
-#{_includedir}/glycin-gtk4-1/glycin-gtk4.h
-#{_datadir}/gir-1.0/Gly-1.gir
-#{_datadir}/gir-1.0/GlyGtk4-1.gir
-#{_datadir}/vala/vapi/glycin-1.deps
-#{_datadir}/vala/vapi/glycin-1.vapi
-#{_datadir}/vala/vapi/glycin-gtk4-1.deps
-#{_datadir}/vala/vapi/glycin-gtk4-1.vapi
+%{_libdir}/libglycin-2.so
+%{_libdir}/libglycin-gtk4-2.so
+%{_includedir}/glycin-2/glycin.h
+%{_includedir}/glycin-gtk4-2/glycin-gtk4.h
+%{_libdir}/pkgconfig/glycin-2.pc
+%{_libdir}/pkgconfig/glycin-gtk4-2.pc
+%{_datadir}/gir-1.0/Gly-2.gir
+%{_datadir}/gir-1.0/GlyGtk4-2.gir
+%{_datadir}/vala/vapi/glycin-2.deps
+%{_datadir}/vala/vapi/glycin-2.vapi
+%{_datadir}/vala/vapi/glycin-gtk4-2.deps
+%{_datadir}/vala/vapi/glycin-gtk4-2.vapi
 
  
