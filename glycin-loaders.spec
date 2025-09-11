@@ -54,6 +54,14 @@ Summary:        Introspection file for %{name}
 %description -n %{girname}
 This package contains introspection file for %{name}.
 
+%package        thumbnailer
+Summary:        Sandboxed image rendering (thumbnailer)
+Requires:       %{name} = %{EVRD}
+
+%description    thumbnailer
+Sandboxed and extendable image decoding.
+This package contains the thumbnailer implementation.
+
 %package -n %{devname}
 Summary:        Development files for %{name}
 Requires: %{name} = %{EVRD}
