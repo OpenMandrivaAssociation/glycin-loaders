@@ -15,7 +15,7 @@ License:        (Apache-2.0 OR MIT) AND BSD-3-Clause AND (MIT OR Apache-2.0) AND
 # LICENSE.dependencies contains a full license breakdown
 URL:            https://gitlab.gnome.org/sophie-h/glycin
 Source0:        https://download.gnome.org/sources/glycin/%{tarball_version}/glycin-%{tarball_version}.tar.xz
-#Source2:        vendor.tar.xz
+Source1:        vendor.tar.xz
 #Source3:        cargo_config
 
 BuildRequires:  cargo
@@ -68,6 +68,16 @@ This package contains development files for %{name}.
 #-a2
 #mkdir .cargo
 #cp %{SOURCE3} .cargo/config
+tar xf %{S:1}
+mkdir .cargo
+cat >>.cargo/config.toml <<EOF
+
+[source.crates-io]
+replace-with = "vendored-sources"
+
+[source.vendored-sources]
+directory = "vendor"
+EOF
 
 %build
 %meson \
