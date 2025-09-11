@@ -54,11 +54,11 @@ Summary:        Introspection file for %{name}
 %description -n %{girname}
 This package contains introspection file for %{name}.
 
-%package        thumbnailer
+%package -n     glycin-thumbnailer
 Summary:        Sandboxed image rendering (thumbnailer)
 Requires:       %{name} = %{EVRD}
 
-%description    thumbnailer
+%description -n glycin-thumbnailer
 Sandboxed and extendable image decoding.
 This package contains the thumbnailer implementation.
 
@@ -115,7 +115,7 @@ EOF
 %{_libdir}/girepository-1.0/Gly-2.typelib
 %{_libdir}/girepository-1.0/GlyGtk4-2.typelib
 
-%files thumbnailer
+%files -n glycin-thumbnailer
 %{_bindir}/glycin-thumbnailer
 %dir %{_datadir}/thumbnailers/
 %{_datadir}/thumbnailers/*.thumbnailer
