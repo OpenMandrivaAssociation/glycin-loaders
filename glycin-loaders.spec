@@ -93,7 +93,7 @@ EOF
   -Dlibglycin=true \
   -Dintrospection=true \
   -Dvapi=true \
-  -Dloaders=glycin-image-rs,glycin-heif,glycin-jxl,glycin-svg,glycin-jpeg2000 \
+  -Dloaders=glycin-image-rs,glycin-heif,glycin-jxl,glycin-svg \
   -Dtest_skip_install=true
 
 %meson_build
